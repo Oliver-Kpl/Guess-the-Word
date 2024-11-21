@@ -15,16 +15,16 @@ class GuessTheWord {
 
     String correct = getRandomWord();
     String userGuess;
-    
+
     System.out.print("Guess the word I'm thinking of: ");
     userGuess = console.next();
-    console.nextLine();  // why???!
+    console.nextLine();  // Removes \n
 
-    while (userGuess != correct) {
+    while (!userGuess.equals(correct)) {
 
         // reprompt and retry
       System.out.print("Sorry. That's not right. Guess again: ");
-      userGuess = console.next();
+      userGuess = console.nextLine();
       console.nextLine();
     }
 

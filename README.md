@@ -4,16 +4,16 @@
 Without running the program, **predict** two things.
 
 1. What is the program **supposed.** to do?
-    > your answer
+    > Tell you when you guess the correct word.
 
 2. What does the program **actually** do?
-    > your answer
+    > Says you're wrong even if you guessed it.
 
 ## Run
 Now run the program. 
 
 3. What did the program actually do?
-    > your answer
+    > Says you're wrong even if you guessed it.
 
 ## Investigate
 1. Go through the code and **annotate** with single line comments what the major blocks of code do.
