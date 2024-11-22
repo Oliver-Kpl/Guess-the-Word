@@ -16,16 +16,20 @@ class GuessTheWord {
     String correct = getRandomWord();
     String userGuess;
 
-    System.out.print("Guess the word I'm thinking of: ");
+    System.out.printf("Guess the %d letter word I'm thinking of: ", correct.length());
     userGuess = console.next();
     console.nextLine();  // Removes \n
-
+    int guessCount = 0;
     while (!userGuess.equals(correct)) {
-
-        // reprompt and retry
-      System.out.print("Sorry. That's not right. Guess again: ");
+      if (guessCount == 4) {
+        System.out.println("You've run out of guesses. The word was: " + correct);
+        console.close();
+        return;
+      }
+      guessCount++;
+      // reprompt and retry
+      System.out.printf("%d guesses left. Try again: ", 5 - guessCount);
       userGuess = console.nextLine();
-      console.nextLine();
     }
 
     console.close();
@@ -45,7 +49,7 @@ class GuessTheWord {
         "the", "quick", "red", "fox", "jumped", "over", "lazy", "brown", "dog"
     };
 
-    int random = 0;
+    int random = (int) (Math.random() * words.length);
 
     return words[random];
   }
